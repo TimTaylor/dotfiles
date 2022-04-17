@@ -1,5 +1,9 @@
 # .bashrc
 
+#############################################################################
+# fedora stuff
+#############################################################################
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -26,10 +30,12 @@ fi
 
 unset rc
 
-########################################################################
-# from https://github.com/mrzool/bash-sensible/blob/master/sensible.bash
+#############################################################################
+# most of these came from bash-sensible
+# https://github.com/mrzool/bash-sensible/blob/master/sensible.bash
+#############################################################################
 
-## GENERAL OPTIONS ##
+##  GENERAL OPTIONS ##
 
 # Prevent file overwrite on stdout redirection
 # Use `>|` to force redirection to an existing file
@@ -43,15 +49,15 @@ shopt -s checkwinsize
 bind Space:magic-space
 
 # Case-insensitive globbing (used in pathname expansion)
-# shopt -s nocaseglob;
+shopt -s nocaseglob;
 
 ## SMARTER TAB-COMPLETION (Readline bindings) ##
 
 # Perform file completion in a case insensitive fashion
-# bind "set completion-ignore-case on"
+bind "set completion-ignore-case on"
 
 # Treat hyphens and underscores as equivalent
-# bind "set completion-map-case on"
+bind "set completion-map-case on"
 
 # Display matches for ambiguous patterns at first tab press
 bind "set show-all-if-ambiguous on"
@@ -71,7 +77,7 @@ shopt -s cmdhist
 PROMPT_COMMAND='history -a'
 
 # Huge history. Doesn't appear to slow things down, so why not?
-HISTSIZE=500000
+HISTSIZE=50000
 HISTFILESIZE=100000
 
 # Avoid duplicate entries
@@ -96,27 +102,27 @@ bind '"\e[D": backward-char'
 
 # Prepend cd to directory names automatically
 shopt -s autocd 2> /dev/null
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
 
-# This defines where cd looks for targets
-# Add the directories you want to have fast access to, separated by colon
-# Ex: CDPATH=".:~:~/projects" will look for targets in the current working
-# directory, in home and in the ~/projects folder
-CDPATH="."
+#############################################################################
+# fzf
+#############################################################################
 
-# This allows you to bookmark your favorite places across the file system
-# Define a variable containing a path and you will be able to cd into it 
-# regardless of the directory you're in
-shopt -s cdable_vars
+# FZF mappings and options (need this after installing rpm)
+[ -f /usr/share/fzf/shell/key-bindings.bash ] && source /usr/share/fzf/shell/key-bindings.bash
 
-# Examples:
-export dotfiles="$HOME/git/htgb/dotfiles"
-export notes="$HOME/git/htgb/notes"
-export git="$HOME/git"
+# use fd with fzf
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-#alias rr="toolbox run rstudio "
-#alias rdev="RSTUDIO_WHICH_R=/usr/local/bin/Rdevel rstudio &" 
+# allow nano to use ** completion
+_fzf_setup_completion path nano #todo - condition this
 
-#if ! [ -f /run/.toolboxenv ]; then
-#    eval "$(starship init bash)"  # aliases for container
-#fi
 
+#############################################################################
+# prompt
+#############################################################################
+eval "$(starship init bash)"
