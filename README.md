@@ -26,6 +26,7 @@ See https://www.stevenrbaker.com/tech/managing-dotfiles-with-gnu-stow.html
 ├── nano
 │   └── .nanorc
 ├── R
+│   ├── .lintr
 │   └── .Rprofile
 ├── README.md
 └── starship
