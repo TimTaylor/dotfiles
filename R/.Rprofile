@@ -7,6 +7,8 @@ invisible(local({
 
     if (interactive()) {
 
+        loadhistory(file = "~/.Rhistory")
+
         suppressMessages(require(devtools))
         suppressMessages(require(coffee))
         firstname <- intToUtf8(c(84L, 105L, 109L))
@@ -19,7 +21,7 @@ invisible(local({
 
 
         # CRAN package statuses
-        if (stats::runif(1)<0.2 && requireNamespace("dang", quietly=TRUE))
+        if (stats::runif(1) < 0.2 && requireNamespace("dang", quietly = TRUE))
             dang::checkCRANStatus(email)
 
         # Enables backtraces for all errors!
@@ -41,9 +43,11 @@ invisible(local({
 
         # enable autocompletions for package names in `require()`, `library()`
         utils::rc.settings(ipck = TRUE)
+
     }
-
-
 
 }))
 
+.Last <- function() {
+    if (interactive()) try(savehistory("~/.Rhistory"))
+}
