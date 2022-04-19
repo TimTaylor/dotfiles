@@ -126,3 +126,4 @@ _fzf_setup_completion path nano #todo - condition this
 # prompt
 #############################################################################
 eval "$(starship init bash)"
+export GPG_TTY=$(tty)
