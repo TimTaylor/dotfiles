@@ -39,7 +39,8 @@ invisible(local({
                 coffee.surname = surname,
                 coffee.name = name,
                 coffee.email = email,
-                usethis.protocol = "ssh")
+                usethis.protocol = "ssh",
+                usethis.full_name = name)
 
         # enable autocompletions for package names in `require()`, `library()`
         utils::rc.settings(ipck = TRUE)
