@@ -127,3 +127,4 @@ _fzf_setup_completion path nano #todo - condition this
 #############################################################################
 eval "$(starship init bash)"
 export GPG_TTY=$(tty)
+export GOPATH=$HOME/go

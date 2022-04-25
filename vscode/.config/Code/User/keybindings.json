@@ -1,0 +1,57 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+      "key": "alt+-",
+      "command": "type",
+      "when": "editorLangId == r && editorTextFocus || editorLangId == rmd && editorTextFocus",
+      "args": {"text": " <- "}
+    },
+    {
+      "key": "ctrl+shift+m",
+      "command": "type",
+      "when": "editorLangId == r && editorTextFocus || editorLangId == rmd && editorTextFocus",
+      "args": {"text": " |> "}
+    },
+    {
+      "key": "ctrl+shift+m",
+      "command": "-workbench.actions.view.problems"
+    },
+
+    // open help panel for selection
+    {
+      "key": "f1",
+      "command": "r.helpPanel.openForSelection",
+      "when": "editorTextFocus && editorLangId == 'r' || editorTextFocus && editorLangId == 'rmd'"
+    },
+
+    {
+      "key": "ctrl+shift+b",
+      "command": "r.runCommand",
+      "when": "resourceLangId == 'r' || resourceLangId == 'rmd'",
+      "args": "coffee::install_package()"
+    },
+    {
+      "key": "ctrl+shift+e",
+      "command": "r.runCommand",
+      "when": "resourceLangId == 'r' || resourceLangId == 'rmd'",
+      "args": "coffee::check_package()"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "r.runCommand",
+      "when": "resourceLangId == 'r' || resourceLangId == 'rmd'",
+      "args": "coffee::test_package()"
+    },
+    {
+      "key": "ctrl+shift+d",
+      "command": "r.runCommand",
+      "when": "resourceLangId == 'r' || resourceLangId == 'rmd'",
+      "args": "coffee::document_package()"
+    },
+    {
+      "key": "ctrl+shift+l",
+      "command": "r.runCommand",
+      "when": "resourceLangId == 'r' || resourceLangId == 'rmd'",
+      "args": "coffee::load_package()"
+    }
+  ]

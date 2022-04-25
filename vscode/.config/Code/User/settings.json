@@ -1,0 +1,42 @@
+{
+  "workbench.colorTheme": "Tomorrow Night Blue",
+  "editor.fontSize": 16,
+  "scm.inputFontSize": 15,
+  "debug.console.fontSize": 16,
+  "markdown.preview.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "window.zoomLevel": 0.5,
+  "terminal.integrated.cursorStyle": "line",
+  "workbench.startupEditor": "none",
+  "editor.renderWhitespace": "none",
+  "editor.guides.indentation": false,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    {
+      "column": 80
+    }
+  ],
+  "[r]": {
+    "editor.defaultFormatter": "Ikuyadeu.r",
+    "editor.formatOnSave": false,
+    "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?"
+  },
+  "[rmd]": {
+    "editor.defaultFormatter": "Ikuyadeu.r",
+    "editor.formatOnSave": false
+  },
+  "path-autocomplete.pathMappings": {
+    "/": "/",
+    "./": "${folder}"
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "quarto.mathjax.theme": "dark",
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "editor.matchBrackets": "always",
+  "workbench.panel.defaultLocation": "right",
+  "files.trimTrailingWhitespace": true,
+  "workbench.tree.indent": 30,
+  "files.eol": "\n",
+  "editor.detectIndentation": false
+}
