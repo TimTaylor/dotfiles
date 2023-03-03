@@ -1,0 +1,17 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "editor.fontSize": 16,
+    "debug.console.fontSize": 16,
+    "markdown.preview.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "editor.rulers": [
+    80
+    ],
+    "workbench.tree.indent": 32,
+    "editor.minimap.enabled": false,
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true
+}
