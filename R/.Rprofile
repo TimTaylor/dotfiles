@@ -53,7 +53,7 @@ invisible(local({
 
         # CRAN package statuses
         if (stats::runif(1) < 0.2 && requireNamespace("dang", quietly = TRUE))
-            dang::checkCRANStatus(ympes.email)
+            dang::checkCRANStatus(email)
 
         # Enables backtraces for all errors!
         if (requireNamespace("rlang", quietly = TRUE))
