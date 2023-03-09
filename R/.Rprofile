@@ -79,9 +79,6 @@ invisible(local({
         # enable autocompletions for package names in `require()`, `library()`
         utils::rc.settings(ipck = TRUE)
 
-        # something to do with vs code?
-        # options(vsc.plot = FALSE)
-
     }
 
 }))
