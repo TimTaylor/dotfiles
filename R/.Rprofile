@@ -85,14 +85,3 @@ invisible(local({
     }
 
 }))
-
-.Last <- function() {
-    if (interactive())
-        utils::savehistory("~/.Rhistory")
-}
-
-# RStudio projects seem to ignore this (TODO - raise issue)
-.First <- function() {
-    if (interactive())
-        utils::loadhistory("~/.Rhistory")
-}
