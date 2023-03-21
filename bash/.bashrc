@@ -132,3 +132,4 @@ export PS1='\n\e[33m\w\e[m$(declare -F __git_ps1 &>/dev/null && __git_ps1 " (%s)
 
 export GPG_TTY=$(tty)
 
+. "$HOME/.cargo/env"

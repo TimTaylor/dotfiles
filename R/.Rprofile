@@ -2,7 +2,7 @@ invisible(local({
 
     # use Rstudio cran repos
     r <- getOption("repos")
-    r["CRAN"] <- "https://cran.rstudio.com/"
+    r["CRAN"] <- "https://cran.rstudio.com"
     options(repos = r)
 
     if (interactive()) {
