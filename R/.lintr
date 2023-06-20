@@ -1,4 +1,8 @@
-linters: with_defaults(
-  object_usage_linter = NULL,
+linters: linters_with_tags(
+  tags = NULL,
+  cyclocomp_linter = NULL,
+  line_length_linter(120),
   commented_code_linter = NULL,
-  line_length_linter = NULL)
+  implicit_integer_linter = NULL,
+  exclude_tags = "executing"
+  )
